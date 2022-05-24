@@ -1,0 +1,26 @@
+{
+  "name": "hex-codes",
+  "version": "1.0.0",
+  "description": "Easily use hex codes in your project",
+  "main": "source/hex.js",
+  "scripts": {
+    "test": "node tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aidan-The-Dev/hex-colors.git"
+  },
+  "keywords": [
+    "hex",
+    "color",
+    "colors",
+    "hex-code",
+    "hex-codes"
+  ],
+  "author": "Aidan-The-Dev",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Aidan-The-Dev/hex-colors/issues"
+  },
+  "homepage": "https://github.com/Aidan-The-Dev/hex-colors#readme"
+}
