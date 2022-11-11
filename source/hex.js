@@ -1,87 +1,87 @@
-module.exports.random = function() {
+module.exports.RANDOM = function() {
     let random = Math.random()
     let exponent = --random.toExponential().split('-')[1]
     random *= Math.pow(10, exponent)
     return '#' + ( ~~(random * (1 << 24) )).toString(16)
 }
 
-module.exports.red = function() {
+module.exports.RED = function() {
     let hexCode = '#FF0000'
     return hexCode
 }
 
-module.exports.green = function() {
+module.exports.GREEN = function() {
     let hexCode = '#00FF00'
     return hexCode
     return hexCode
 }
 
-module.exports.blue = function() {
+module.exports.BLUE = function() {
     let hexCode = '#0000FF'
     return hexCode
 }
 
-module.exports.yellow = function() {
+module.exports.YELLOW = function() {
     let hexCode = '#FFE135'
     return hexCode
 }
 
-module.exports.purple = function() {
+module.exports.PURPLE = function() {
     let hexCode = '#80080'
     return hexCode
 }
 
-module.exports.black = function() {
+module.exports.BLACK = function() {
     let hexCode = '#000000'
     return hexCode
 }
 
-module.exports.silver = function() {
+module.exports.SILVER = function() {
     let hexCode = '#C0C0C0'
     return hexCode
 }
 
-module.exports.gray = function() {
+module.exports.GRAY = function() {
     let hexCode = '#808080'
     return hexCode
 }
 
-module.exports.maroon = function() {
+module.exports.MAROON = function() {
     let hexCode = '#800000'
     return hexCode
 }
 
-module.exports.olive = function() {
+module.exports.OLIVE = function() {
     let hexCode = '#808000'
     return hexCode
 }
 
-module.exports.lime = function() {
+module.exports.LIME = function() {
     let hexCode = '#00FF00'
     return hexCode
 }
 
-module.exports.aqua = function() {
+module.exports.AQUA = function() {
     let hexCode = '#00FFFF'
     return hexCode
 }
 
-module.exports.teal = function() {
+module.exports.TEAL = function() {
     let hexCode = '#008080'
     return hexCode
 }
 
-module.exports.navy = function() {
+module.exports.NAVY = function() {
     let hexCode = '#000080'
     return hexCode
 }
 
-module.exports.violet = function() {
+module.exports.VIOLET = function() {
     let hexCode = '#8F00FF'
     return hexCode
 }
 
-module.exports.orange = function() {
+module.exports.ORANGE = function() {
     let hexCode = '#FFA500'
     return hexCode
 }
