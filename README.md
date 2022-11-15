@@ -24,23 +24,23 @@ console.log(variableName)
 
 ## Available Colors
 ```txt
-random
-red
-blue
-green
-yellow
-orange
-purple
-black
-silver
-gray
-maroon
-olive
-lime
-aqua
-teal
-navy
-violet
+RANDOM
+RED
+BLUE
+GREEN
+YELLOW
+ORANGE
+PURPLE
+BLACK
+SILVER
+GRAY
+MAROON
+OLIVE
+LIME
+AQUA
+TEAL
+NAVY
+VIOLET
 
 More will be added in future updates
 ```

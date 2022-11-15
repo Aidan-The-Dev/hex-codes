@@ -85,3 +85,39 @@ module.exports.ORANGE = function() {
     let hexCode = '#FFA500'
     return hexCode
 }
+
+module.exports.CHERRYRED = function() {
+    let hexCode = '#990F02'
+}
+
+module.exports.ROSE = function() {
+    let hexCode = '#990F02'
+}
+
+module.exports.JAM = function() {
+    let hexCode = '#60100B'
+}
+
+module.exports.MERLOT = function() {
+    let hexCode = '#541E1B'
+}
+
+module.exports.GARNET = function() {
+    let hexCode = '#610C04'
+}
+
+module.exports.CRIMSON = function() {
+    let hexCode = '#900603'
+}
+
+module.exports.SKY = function() {
+    let hexCode = '#63C5DA'
+}
+
+module.exports.COBALT = function() {
+    let hexCode = '#1338BE'
+}
+
+module.exports.AZURE = function() {
+    let hexCode = '#1520A6'
+}
