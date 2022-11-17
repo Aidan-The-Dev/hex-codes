@@ -18,7 +18,7 @@ const hex = require('hex-codes')
 ### Using the hex codes
 ```javascript
 const hex = require('hex-codes')
-const variableName = hex.blue()
+const blue = hex.BLUE()
 console.log(variableName)
 ```
 
@@ -41,6 +41,16 @@ AQUA
 TEAL
 NAVY
 VIOLET
+ORANGE
+CHERRYRED
+ROSE
+JAM
+MERLOT
+GARNET
+CRIMSON
+SKY
+COBALT
+AZURE
 
 More will be added in future updates
 ```
