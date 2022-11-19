@@ -1,6 +1,6 @@
 {
   "name": "hex-codes",
-  "version": "1.0.0",
+  "version": "1.2.3",
   "description": "Easily use hex codes in your project",
   "main": "source/hex.js",
   "scripts": {
