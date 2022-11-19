@@ -88,36 +88,45 @@ module.exports.ORANGE = function() {
 
 module.exports.CHERRYRED = function() {
     let hexCode = '#990F02'
+    return hexCode
 }
 
 module.exports.ROSE = function() {
     let hexCode = '#990F02'
+    return hexCode
 }
 
 module.exports.JAM = function() {
     let hexCode = '#60100B'
+    return hexCode
 }
 
 module.exports.MERLOT = function() {
     let hexCode = '#541E1B'
+    return hexCode
 }
 
 module.exports.GARNET = function() {
     let hexCode = '#610C04'
+    return hexCode
 }
 
 module.exports.CRIMSON = function() {
     let hexCode = '#900603'
+    return hexCode
 }
 
 module.exports.SKY = function() {
     let hexCode = '#63C5DA'
+    return hexCode
 }
 
 module.exports.COBALT = function() {
     let hexCode = '#1338BE'
+    return hexCode
 }
 
 module.exports.AZURE = function() {
     let hexCode = '#1520A6'
+    return hexCode
 }
