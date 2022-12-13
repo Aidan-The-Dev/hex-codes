@@ -13,7 +13,6 @@ module.exports.RED = function() {
 module.exports.GREEN = function() {
     let hexCode = '#00FF00'
     return hexCode
-    return hexCode
 }
 
 module.exports.BLUE = function() {
