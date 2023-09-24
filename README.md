@@ -21,12 +21,6 @@ const { hex, tohex } = require('hex-codes')
 const blue = hex('blue')
 console.log(blue)
 ```
-### Converting strings to hex codes
-```js
-const { hex, tohex } = require('hex-codes')
-const hexcode = tohex('red')
-console.log(hexcode)
-```
 
 ## Available Colors
 ```txt

@@ -8,8 +8,4 @@ console.log(random)
 console.log(hex('orange'))
 console.log(hex('aqua'))
 
-const tohex = require('../source/tohex')
-
-let color = tohex("darkblue")
-console.log(color)
 
