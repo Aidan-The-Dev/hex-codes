@@ -17,19 +17,23 @@ const hex = require('hex-codes')
 ```
 ### Using the hex codes
 ```javascript
-const hex = require('hex-codes')
-const blue = hex.BLUE()
-console.log(variableName)
+const { hex, tohex } = require('hex-codes')
+const blue = hex('blue')
+console.log(blue)
+```
+### Converting strings to hex codes
+```js
+const { hex, tohex } = require('hex-codes')
+const hexcode = tohex('red')
+console.log(hexcode)
 ```
 
 ## Available Colors
 ```txt
-RANDOM
 RED
-BLUE
 GREEN
+BLUE
 YELLOW
-ORANGE
 PURPLE
 BLACK
 SILVER
@@ -51,8 +55,81 @@ CRIMSON
 SKY
 COBALT
 AZURE
-
-More will be added in future updates
+PINK
+SALMON
+WHEAT
+LAVENDER
+GOLD
+PLUM
+INDIGO
+TURQUOISE
+BEIGE
+THISTLE
+CORAL
+SEAGREEN
+DARKORANGE
+FIREBRICK
+LIGHTSKYBLUE
+MEDIUMSEAGREEN
+TOMATO
+KHAKI
+DARKVIOLET
+PALEVIOLETRED
+MEDIUMSLATEBLUE
+MEDIUMTURQUOISE
+MEDIUMVIOLETRED
+DARKSLATEBLUE
+MIDNIGHTBLUE
+DODGERBLUE
+DARKSLATEGRAY
+LIGHTSLATEGRAY
+LIGHTSTEELBLUE
+PALEGREEN
+SPRINGGREEN
+FORESTGREEN
+OLIVEDRAB
+YELLOWGREEN
+HONEYDEW
+IVORY
+SEASHELL
+LINEN
+MINTCREAM
+GHOSTWHITE
+WHITESMOKE
+LAVENDERBLUSH
+OLDLACE
+FLORALWHITE
+ALICEBLUE
+PAPAYAWHIP
+BLANCHEDALMOND
+BISQUE
+PEACHPUFF
+NAVAJOWHITE
+MOCCASIN
+CORNSILK
+MISTYROSE
+ANTIQUEWHITE
+CREAM
+LEMONCHIFFON
+LIGHTGOLDENRODYELLOW
+PALEGOLDENROD
+KHAKI
+DARKKHAKI
+PERU
+CHOCOLATE
+SADDLEBROWN
+SIENNA
+BURLYWOOD
+ROSYBROWN
+SANDYBROWN
+TAN
+GOLDENROD
+DARKGOLDENROD
+PERU
+DARKOLIVEGREEN
+OLIVEDRAB
+GREENYELLOW
+LAWNGREEN
 ```
 
 ## Contributing
@@ -67,5 +144,5 @@ Pull requests and stars are always welcome. For bugs and feature requests, [plea
 
 ## License
 
-Copyright © 2022 [Aidan-The-Dev](#Aidan-The-Dev)
+Copyright © 2023 [Aidan-The-Dev](#Aidan-The-Dev)
 Licensed under the Apache-2.0 license.

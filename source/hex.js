@@ -1,4 +1,5 @@
 function getColorHex(colorName) {
+    colorName = colorName.toUpperCase()
     const colors = {
         RANDOM: () => `#${Math.floor(Math.random() * 16777215).toString(16)}`,
         RED: () => '#FF0000',
