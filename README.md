@@ -17,7 +17,7 @@ const hex = require('hex-codes')
 ```
 ### Using the hex codes
 ```javascript
-const { hex, tohex } = require('hex-codes')
+const { hex } = require('hex-codes')
 const blue = hex('blue')
 console.log(blue)
 ```
