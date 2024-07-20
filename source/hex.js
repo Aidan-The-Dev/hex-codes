@@ -1,131 +1,143 @@
-module.exports.RANDOM = function() {
-    let random = Math.random()
-    let exponent = --random.toExponential().split('-')[1]
-    random *= Math.pow(10, exponent)
-    return '#' + ( ~~(random * (1 << 24) )).toString(16)
+function getColorHex(colorName) {
+    colorName = colorName.toUpperCase()
+    const colors = {
+        RANDOM: () => `#${Math.floor(Math.random() * 16777215).toString(16)}`,
+        RED: () => '#FF0000',
+        GREEN: () => '#00FF00',
+        BLUE: () => '#0000FF',
+        YELLOW: () => '#FFFF00',
+        PURPLE: () => '#800080',
+        BLACK: () => '#000000',
+        SILVER: () => '#C0C0C0',
+        GRAY: () => '#808080',
+        MAROON: () => '#800000',
+        OLIVE: () => '#808000',
+        LIME: () => '#00FF00',
+        AQUA: () => '#00FFFF',
+        TEAL: () => '#008080',
+        NAVY: () => '#000080',
+        VIOLET: () => '#8F00FF',
+        ORANGE: () => '#FFA500',
+        CHERRYRED: () => '#990F02',
+        ROSE: () => '#FF007F',
+        JAM: () => '#60100B',
+        MERLOT: () => '#541E1B',
+        GARNET: () => '#610C04',
+        CRIMSON: () => '#900603',
+        SKY: () => '#63C5DA',
+        COBALT: () => '#1338BE',
+        AZURE: () => '#1520A6',
+        PINK: () => '#FFC0CB',
+        SALMON: () => '#FA8072',
+        WHEAT: () => '#F5DEB3',
+        LAVENDER: () => '#E6E6FA',
+        GOLD: () => '#FFD700',
+        PLUM: () => '#DDA0DD',
+        INDIGO: () => '#4B0082',
+        TURQUOISE: () => '#40E0D0',
+        BEIGE: () => '#F5F5DC',
+        THISTLE: () => '#D8BFD8',
+        CORAL: () => '#FF7F50',
+        SEAGREEN: () => '#2E8B57',
+        CRIMSON: () => '#DC143C',
+        DARKORANGE: () => '#FF8C00',
+        FIREBRICK: () => '#B22222',
+        LIGHTSKYBLUE: () => '#87CEFA',
+        MEDIUMSEAGREEN: () => '#3CB371',
+        TOMATO: () => '#FF6347',
+        KHAKI: () => '#F0E68C',
+        DARKVIOLET: () => '#9400D3',
+        PALEVIOLETRED: () => '#DB7093',
+        MEDIUMSLATEBLUE: () => '#7B68EE',
+        MEDIUMTURQUOISE: () => '#48D1CC',
+        MEDIUMVIOLETRED: () => '#C71585',
+        DARKSLATEBLUE: () => '#483D8B',
+        MIDNIGHTBLUE: () => '#191970',
+        DODGERBLUE: () => '#1E90FF',
+        DARKSLATEGRAY: () => '#2F4F4F',
+        LIGHTSLATEGRAY: () => '#778899',
+        LIGHTSTEELBLUE: () => '#B0C4DE',
+        PALEGREEN: () => '#98FB98',
+        SPRINGGREEN: () => '#00FF7F',
+        FORESTGREEN: () => '#228B22',
+        OLIVEDRAB: () => '#6B8E23',
+        YELLOWGREEN: () => '#9ACD32',
+        HONEYDEW: () => '#F0FFF0',
+        IVORY: () => '#FFFFF0',
+        SEASHELL: () => '#FFF5EE',
+        LINEN: () => '#FAF0E6',
+        MINTCREAM: () => '#F5FFFA',
+        GHOSTWHITE: () => '#F8F8FF',
+        WHITESMOKE: () => '#F5F5F5',
+        LAVENDERBLUSH: () => '#FFF0F5',
+        OLDLACE: () => '#FDF5E6',
+        FLORALWHITE: () => '#FFFAF0',
+        ALICEBLUE: () => '#F0F8FF',
+        PAPAYAWHIP: () => '#FFEFD5',
+        BLANCHEDALMOND: () => '#FFEBCD',
+        BISQUE: () => '#FFE4C4',
+        PEACHPUFF: () => '#FFDAB9',
+        NAVAJOWHITE: () => '#FFDEAD',
+        MOCCASIN: () => '#FFE4B5',
+        CORNSILK: () => '#FFF8DC',
+        MISTYROSE: () => '#FFE4E1',
+        ANTIQUEWHITE: () => '#FAEBD7',
+        CREAM: () => '#FFFDD0',
+        LEMONCHIFFON: () => '#FFFACD',
+        BEIGE: () => '#F5F5DC',
+        LIGHTGOLDENRODYELLOW: () => '#FAFAD2',
+        PALEGOLDENROD: () => '#EEE8AA',
+        KHAKI: () => '#F0E68C',
+        DARKKHAKI: () => '#BDB76B',
+        PERU: () => '#CD853F',
+        CHOCOLATE: () => '#D2691E',
+        SADDLEBROWN: () => '#8B4513',
+        SIENNA: () => '#A0522D',
+        BURLYWOOD: () => '#DEB887',
+        ROSYBROWN: () => '#BC8F8F',
+        SANDYBROWN: () => '#F4A460',
+        TAN: () => '#D2B48C',
+        GOLDENROD: () => '#DAA520',
+        DARKGOLDENROD: () => '#B8860B',
+        PERU: () => '#CD853F',
+        DARKOLIVEGREEN: () => '#556B2F',
+        OLIVEDRAB: () => '#6B8E23',
+        GREENYELLOW: () => '#ADFF2F',
+        LAWNGREEN: () => '#7CFC00',
+        CHARTREUSE: () => '#7FFF00',
+        LIMEGREEN: () => '#32CD32',
+        SPRINGGREEN: () => '#00FF7F',
+        MEDIUMSPRINGGREEN: () => '#00FA9A',
+        LIGHTGREEN: () => '#90EE90',
+        DARKSEAGREEN: () => '#8FBC8F',
+        MEDIUMAQUAMARINE: () => '#66CDAA',
+        AQUAMARINE: () => '#7FFFD4',
+        PALETURQUOISE: () => '#AFEEEE',
+        TURQUOISE: () => '#40E0D0',
+        MEDIUMTURQUOISE: () => '#48D1CC',
+        DARKCYAN: () => '#008B8B',
+        LIGHTCYAN: () => '#E0FFFF',
+        AZURE: () => '#F0FFFF',
+        LIGHTSTEELBLUE: () => '#B0C4DE',
+        LIGHTBLUE: () => '#ADD8E6',
+        POWDERBLUE: () => '#B0E0E6',
+        LIGHTSKYBLUE: () => '#87CEFA',
+        SKYBLUE: () => '#87CEEB',
+        DEEPSKYBLUE: () => '#00BFFF',
+        DODGERBLUE: () => '#1E90FF',
+        CORNFLOWERBLUE: () => '#6495ED',
+        ROYALBLUE: () => '#4169E1',
+        BLUE: () => '#0000FF',
+        MEDIUMBLUE: () => '#0000CD',
+        DARKBLUE: () => '#00008B',
+        NAVY: () => '#000080',
+    };
+
+    if (colors[colorName]) {
+        return colors[colorName]();
+    } else {
+        return null;
+    }
 }
 
-module.exports.RED = function() {
-    let hexCode = '#FF0000'
-    return hexCode
-}
-
-module.exports.GREEN = function() {
-    let hexCode = '#00FF00'
-    return hexCode
-}
-
-module.exports.BLUE = function() {
-    let hexCode = '#0000FF'
-    return hexCode
-}
-
-module.exports.YELLOW = function() {
-    let hexCode = '#FFE135'
-    return hexCode
-}
-
-module.exports.PURPLE = function() {
-    let hexCode = '#80080'
-    return hexCode
-}
-
-module.exports.BLACK = function() {
-    let hexCode = '#000000'
-    return hexCode
-}
-
-module.exports.SILVER = function() {
-    let hexCode = '#C0C0C0'
-    return hexCode
-}
-
-module.exports.GRAY = function() {
-    let hexCode = '#808080'
-    return hexCode
-}
-
-module.exports.MAROON = function() {
-    let hexCode = '#800000'
-    return hexCode
-}
-
-module.exports.OLIVE = function() {
-    let hexCode = '#808000'
-    return hexCode
-}
-
-module.exports.LIME = function() {
-    let hexCode = '#00FF00'
-    return hexCode
-}
-
-module.exports.AQUA = function() {
-    let hexCode = '#00FFFF'
-    return hexCode
-}
-
-module.exports.TEAL = function() {
-    let hexCode = '#008080'
-    return hexCode
-}
-
-module.exports.NAVY = function() {
-    let hexCode = '#000080'
-    return hexCode
-}
-
-module.exports.VIOLET = function() {
-    let hexCode = '#8F00FF'
-    return hexCode
-}
-
-module.exports.ORANGE = function() {
-    let hexCode = '#FFA500'
-    return hexCode
-}
-
-module.exports.CHERRYRED = function() {
-    let hexCode = '#990F02'
-    return hexCode
-}
-
-module.exports.ROSE = function() {
-    let hexCode = '#990F02'
-    return hexCode
-}
-
-module.exports.JAM = function() {
-    let hexCode = '#60100B'
-    return hexCode
-}
-
-module.exports.MERLOT = function() {
-    let hexCode = '#541E1B'
-    return hexCode
-}
-
-module.exports.GARNET = function() {
-    let hexCode = '#610C04'
-    return hexCode
-}
-
-module.exports.CRIMSON = function() {
-    let hexCode = '#900603'
-    return hexCode
-}
-
-module.exports.SKY = function() {
-    let hexCode = '#63C5DA'
-    return hexCode
-}
-
-module.exports.COBALT = function() {
-    let hexCode = '#1338BE'
-    return hexCode
-}
-
-module.exports.AZURE = function() {
-    let hexCode = '#1520A6'
-    return hexCode
-}
+module.exports = getColorHex;
