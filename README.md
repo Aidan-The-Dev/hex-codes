@@ -136,6 +136,12 @@ Pull requests and stars are always welcome. For bugs and feature requests, [plea
 
 * [Github](https://github.com/aidan-the-dev)
 
+## Contributors
+
+**666wCodes**
+
+* [Github](https://github.com/666wCodes)
+
 ## License
 
 Copyright © 2023 [Aidan-The-Dev](#Aidan-The-Dev)
